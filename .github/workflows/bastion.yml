@@ -1,4 +1,4 @@
-name: 'Terraform Pipeline'
+name: 'Bastion Pipeline'
 
 on:
   push:
