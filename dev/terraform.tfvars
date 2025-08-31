@@ -1,0 +1,17 @@
+name                   = "myResourceGroup"
+location               = "East US"
+vnet_name              = "myVnet"
+vnet_address_space     = ["10.0.0.0/16"]
+subnet_name            = "mySubnet"
+subnet_prefix          = ["10.0.1.0/24"]
+vm1_name               = "myVM"
+vm2_name               = "myVM2"
+nic1_name              = "myNic1"
+nic2_name              = "myNic2"
+vm_size                = "Standard_DS1_v2"
+lb_name                = "myExternalLB"
+lb_public_ip_name      = "myLBPublicIP"
+bastion_name           = "myBastion"
+bastion_subnet_name    = "AzureBastionSubnet"
+bastion_subnet_prefix  = ["10.0.2.0/24"]
+bastion_public_ip_name = "myBastionPublicIP"
