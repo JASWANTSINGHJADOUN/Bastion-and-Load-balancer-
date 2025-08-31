@@ -45,12 +45,12 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
-	    working-directory: dev
+	  working-directory: dev
 	  
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan 
-	    working-directory: dev
+	  working-directory: dev
 
   
      
