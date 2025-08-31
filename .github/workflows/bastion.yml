@@ -72,7 +72,7 @@ jobs:
         issue-body: "Please review and approve to proceed with 'terraform apply'. Comment `approve` to continue or `deny` to cancel."
         exclude-workflow-initiator-as-approver: false
     
-              
+             
 
   terraform-apply:
     name: 'Terraform Apply'
