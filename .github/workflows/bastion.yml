@@ -34,7 +34,7 @@ jobs:
       working-directory: dev
 
     - name: Terraform Plan
-      run: terraform plan -out=tfplan
+      run: terraform plan 
       working-directory: dev
 
   tfsec-scan:
@@ -62,8 +62,17 @@ jobs:
       # Enable required reviewers in GitHub UI under Environments
 
     steps:
-    - name: Wait for manual approval
-      run: echo "Waiting for approval before apply..."
+    - name: Manual Approval
+      uses: trstringer/manual-approval@v1.9.0
+      with:
+        approvers: your-github-username
+        secret: ${{ secrets.GITHUB_TOKEN }}
+        minimum-approvals: 1
+        issue-title: "Manual approval required before Terraform apply"
+        issue-body: "Please review and approve to proceed with 'terraform apply'. Comment `approve` to continue or `deny` to cancel."
+        exclude-workflow-initiator-as-approver: false
+    
+              
 
   terraform-apply:
     name: 'Terraform Apply'
